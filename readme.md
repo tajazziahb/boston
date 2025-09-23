@@ -1,7 +1,6 @@
 # Boston.com Clone  
 
 ![Boston.com Clone Screenshot](images/boston.png)  
-<!-- Replace with an actual screenshot of your app -->
 
 **A front-end clone of the Boston.com news site.**  
 A project built to practice responsive layouts, typography, and content structuring by recreating the look and feel of a major news site.  
@@ -10,7 +9,6 @@ A project built to practice responsive layouts, typography, and content structur
 
 ## Live Demo  
 [Click here to view](https://your-boston-clone-link.netlify.app)  
-<!-- Replace with your actual Netlify URL -->
 
 ---
 

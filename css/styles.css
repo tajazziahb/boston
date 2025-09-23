@@ -1,0 +1,553 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+}
+
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 14px 16px;
+    overflow: hidden;
+}
+
+header img {
+    float: left;
+    width: 200px;
+    margin-left: 300px;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 200px;
+}
+
+header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 14px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+article h3 {
+    clear: left;
+    margin: 10px 0 16px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+main {
+    max-width: 1100px;
+    margin: 100px auto 36px;
+    padding: 0 16px;
+
+}
+
+section {
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+article {
+    float: left;
+    width: 66%;
+}
+
+article .pats {
+    width: 60%;
+}
+
+aside {
+    float: right;
+    width: 30%;
+}
+
+aside h3 {
+    border-bottom: 2px solid rgb(155, 22, 24);
+}
+
+h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgb(155, 22, 24);
+}
+
+figure {
+    justify-content: center;
+}
+
+
+
+article figure {
+    float: left;
+    width: 65%;
+    margin: 0 0 12px;
+}
+
+article nav {
+    float: right;
+    width: 38%;
+    margin: 0;
+}
+
+article nav h4 {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    color: rgb(155, 22, 24);
+    text-transform: uppercase;
+    clear: none;
+}
+
+article nav p {
+    margin: 4px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #222;
+    clear: none;
+}
+
+article h3 {
+    clear: left;
+    margin: 12px 0 16px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+aside ol {
+    margin: 0;
+    padding: 0 0 0 22px;
+}
+
+aside li {
+    padding: 12px 0;
+    border-top: 1px solid #e8e8e8;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.auto {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 30px 0px 20px;
+    width: 75%;
+}
+
+section h4 {
+    margin: 18px 0 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: rgb(155, 22, 24);
+    overflow: hidden;
+}
+
+section h4 span {
+    color: black;
+}
+
+section h4 a {
+    font-size: 14px;
+    color: lightgray;
+    text-decoration: underline;
+}
+
+section figure {
+    float: left;
+    width: 40%;
+    margin: 0 0 10px;
+}
+
+section figure img {
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+section ul {
+    float: right;
+    width: 58%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fords li {
+    padding: 12px 0;
+    border-top: 1px solid lightgrey;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+section h5 {
+    clear: both;
+    margin: 12px 0 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+article section {
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+article section figure {
+    float: left;
+    width: 48%;
+    margin: 0 2% 10px 0;
+}
+
+article section figure+figure {
+    float: left;
+    margin-right: 0;
+}
+
+article section img {
+    height: 190px;
+    object-fit: cover;
+}
+
+article section p {
+    margin: 6px 0 0;
+    font-size: 13px;
+}
+
+footer {
+    display: flex;
+}
+
+.footer-socials img {
+    flex: 1;
+    width: 300px;
+}
+
+.legal {
+    margin-left: 800px;
+}
+
+footer ul {
+    display: flex;
+    padding-left: 265px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer li {
+    margin-left: 5px;
+    color: rgb(71, 204, 249);
+    width: 140px;
+}
+
+section figure img,
+article figure img,
+article section img,
+.auto figure img {
+    object-fit: contain;
+}
+
+
+figure,
+article .pats,
+article section figure,
+.auto figure {
+    height: auto;
+    overflow: visible;
+}
+
+@media (max-width: 1200px) {
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "article"
+            "auto"
+            "aside";
+        gap: 24px;
+    }
+
+    main>section:first-of-type {
+        display: contents;
+    }
+
+    main>section:first-of-type>article {
+        grid-area: article;
+    }
+
+    main>.auto {
+        grid-area: auto;
+    }
+
+    main>section:first-of-type>aside {
+        grid-area: aside;
+    }
+
+    article,
+    aside,
+    .auto,
+    article figure,
+    article nav,
+    section figure,
+    section ul,
+    article section figure {
+        float: none;
+        width: 100%;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas:
+            "label label"
+            "lead  list"
+            "title list"
+            "duo   duo";
+        column-gap: 24px;
+        row-gap: 12px;
+        align-items: start;
+    }
+
+    article>h2 {
+        grid-area: label;
+        margin: 0 0 8px 0;
+    }
+
+    article .pats {
+        grid-area: lead;
+        margin: 0;
+    }
+
+    article>h3 {
+        grid-area: title;
+        margin: 8px 0 0 0;
+    }
+
+    article>nav {
+        grid-area: list;
+        margin: 0;
+    }
+
+    article>section {
+        grid-area: duo;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    article>section figure {
+        flex: 1 1 49%;
+        margin: 0 0 10px 0;
+    }
+
+    section figure img,
+    article figure img,
+    article section img,
+    .auto figure img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+@media (max-width: 900px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+    }
+
+    header>a:first-child {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    header img {
+        float: none;
+        margin: 0 auto;
+        width: auto;
+        max-width: 200px;
+        height: auto;
+    }
+
+    header>nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 14px;
+        margin: 0;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    article {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "label"
+            "lead"
+            "title"
+            "duo"
+            "list";
+        row-gap: 14px;
+    }
+
+    section figure img,
+    article figure img,
+    article section img,
+    .auto figure img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 600px) {
+
+    main {
+        margin-top: 8px;
+        padding: 0 12px;
+    }
+
+    article,
+    aside,
+    .auto,
+    article figure,
+    article nav,
+    section figure,
+    section ul,
+    article section figure {
+        float: none;
+        width: 100%;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "label"
+            "lead"
+            "title"
+            "duo"
+            "list";
+        row-gap: 16px;
+    }
+
+    article>h2 {
+        grid-area: label;
+        margin: 0;
+    }
+
+    article .pats {
+        grid-area: lead;
+        margin: 0;
+    }
+
+    article>h3 {
+        grid-area: title;
+        margin: 0 0 4px 0;
+    }
+
+    article .pats img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    article>section {
+        grid-area: duo;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    article>section figure {
+        margin: 0;
+    }
+
+    article>section img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    article>nav {
+        grid-area: list;
+        margin: 0;
+        text-align: left;
+    }
+
+    article>nav p {
+        margin: 4px 0 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #333;
+        color: white;
+    }
+
+    header>a:first-child {
+        text-align: center;
+    }
+
+    header img {
+        margin: 0 auto;
+    }
+
+    body,
+    header,
+    main,
+    article,
+    aside,
+    .auto {
+        background: #000;
+        color: #fff;
+    }
+
+    footer {
+        background: #fff;
+        color: #000;
+    }
+
+    h2,
+    aside h3,
+    article>nav h4,
+    .auto h4 {
+        color: rgb(155, 22, 24);
+    }
+
+    h2,
+    aside h3 {
+        border-color: rgb(155, 22, 24);
+    }
+
+    .auto span {
+        color: white;
+    }
+}

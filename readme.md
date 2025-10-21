@@ -8,7 +8,7 @@ A project built to practice responsive layouts, typography, and content structur
 ---
 
 ## Live Demo  
-[Click here to view](https://your-boston-clone-link.netlify.app)  
+[Click here to view](https://boston-xi.vercel.app/)  
 
 ---
 
